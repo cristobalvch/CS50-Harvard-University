@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Covid-19 Line Plot
+{% endblock %}
+
+{% block body %}
+<form action="/">
+	<button class="plot-button" type="submit" value="Submit">Return to Main Page</button>
+</form>
+
+<div class="cointainer" align="center">
+	<h1>New Covid Cases by Region</h1>
+	<embed type="image/svg+xml" src = "{{graph_total | safe}}" style="max-width:800px">
+	<h1>Total Covid Cases by Region</h1>
+	<embed type="image/svg+xml" src = "{{graph_new | safe}}" style="max-width:800px">
+</div>
+{% endblock %}

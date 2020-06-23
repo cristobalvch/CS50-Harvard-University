@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- https://aws.amazon.com/ -->
+        <link href="https://a0.awsstatic.com/main/images/site/fav/favicon.ico" rel="icon">
+
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet">
+
+        <script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment-with-locales.min.js"></script>
+
+        <script>
+
+            $(function() {
+
+                // When Size is clicked, display bytes instead (and ignore further clicking)
+                $('.readable.Size').click(function() {
+                    $(this).removeClass('readable').text($(this).attr('data-Size')).off();
+                });
+
+                // When LastModified is clicked, display localized ISO 8601
+                $('.readable.LastModified').click(function() {
+                    $(this).removeClass('readable').text(moment($(this).attr('data-LastModified')).format()).off();
+                });
+
+                // Display LastModified as relative time by default
+                $('.readable.LastModified').each(function(index, element) {
+                    $(this).text(moment($(this).attr('data-LastModified')).fromNow());
+                });
+            });
+
+        </script>
+
+        <style>
+
+            /* Wrap long strings */
+            * {
+                word-break: break-all;
+            }
+
+            /* Don't fill width */
+            .form-control {
+                display: initial;
+                width: initial;
+            }
+
+            /* Restore cancel button, https://github.com/twbs/bootstrap/issues/5624 */
+            input[type="search"]::-webkit-search-cancel-button {
+                -webkit-appearance: searchfield-cancel-button;
+            }
+
+            /* Small thumbnails */
+            .img-thumbnail {
+                height: 240px;
+            }
+
+            /* Make ../ easier to click */
+            .parent {
+                letter-spacing: 5px;
+            }
+
+            /* Draw attention to clickability of Size and LastModified */
+            .readable.Size:hover, .readable.LastModified:hover {
+                cursor: zoom-in;
+            }
+
+            /* Right-align Size and LastModified */
+            .Size, .LastModified {
+                text-align: right;
+            }
+
+            /* Muted */
+            .download, .highlight, .raw, .torrent, .Size, .LastModified {
+                color: #ccc;
+                font-size: smaller;
+            }
+
+            /* Hide all secondary text except Size on small screens */
+            @media only screen and (max-width: 640px) {
+                .download, .highlight, .torrent, .Size, .LastModified {
+                    display: none;
+                }
+            }
+
+            /* Move search to own line on small screens */
+            @media only screen and (max-width: 640px) {
+                input[type="search"] {
+                    display: block;
+                    margin-top: .5rem;
+                }
+            }
+
+        </style>
+
+        <title>CS50 CDN</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">CS50 CDN</a>
+        </nav>
+
+        <main>
+            
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="3" scope="col">
+                    <nav aria-label="breadcrumb">
+                        
+                        <a href="./../../../../../">cdn.cs50.net/</a><a  href="./../../../../">2019/</a><a  href="./../../../">fall/</a><a  href="./../../">tracks/</a><a  href="./../">web/</a><a aria-current="page" href="./">src/</a> <input autocomplete="off" autofocus class="form-control form-control-sm" placeholder="Search" type="search">
+                    </nav>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr data-basename="../">
+                <td colspan="3">
+                    <a class="parent" href="../">../</a>
+                </td>
+                </tr>
+            
+            
+                
+                    <tr data-basename ="css/">
+                        <td colspan="3">
+                            <a href="css/">css/</a>
+                        </td>
+                    
+                </tr>
+            
+                
+                    <tr data-basename ="databases/">
+                        <td colspan="3">
+                            <a href="databases/">databases/</a>
+                        </td>
+                    
+                </tr>
+            
+                
+                    <tr data-basename ="flask/">
+                        <td colspan="3">
+                            <a href="flask/">flask/</a>
+                        </td>
+                    
+                </tr>
+            
+                
+                    <tr data-basename ="html/">
+                        <td colspan="3">
+                            <a href="html/">html/</a>
+                        </td>
+                    
+                </tr>
+            
+                
+                    <tr data-basename ="js/">
+                        <td colspan="3">
+                            <a href="js/">js/</a>
+                        </td>
+                    
+                </tr>
+            
+        </tbody>
+    </table>
+
+    <script>
+
+        // Populate input's value from hash
+        $('input').val(window.location.hash.substring(1));
+
+        // Filter rows
+        $('input').on('keyup search', function() {
+
+            // Get input's value
+            const value = $(this).val().trim().toLowerCase();
+
+            // Store input's value in hash
+            if (value) {
+                window.location.hash = value;
+            }
+            else {
+                window.location.hash = '';
+            }
+
+            // Iterate over rows with basenames
+            $('tr[data-basename]').each(function(index, element) {
+
+                // Show if matched
+                if (!value || $(this).attr('data-basename').toLowerCase().indexOf(value) !== -1) {
+                    $(this).show();
+                }
+
+                // Hide if not matched
+                else {
+                    $(this).hide();
+                }
+            });
+
+            // Re-stripe table
+            // https://stackoverflow.com/a/52553884/5156190
+            $('tbody tr:visible').each(function(index) {
+                $(this).css('background-color', !!(index & 1) ? 'rgba(0,0,0,0)' : 'rgba(0,0,0,.05)');
+            });
+        }).trigger('search');
+
+    </script>
+
+
+        </main>
+
+    </body>
+
+</html>

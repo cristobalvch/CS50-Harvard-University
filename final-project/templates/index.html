@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Covid-19 Cases in Chile
+{% endblock %}
+
+{% block body %}
+	<div class="header">
+		<form action="/results">
+			<h1 class="main-title">Analysis of the Covid-19 Situation in Chile</h1>
+			<div class="form-box">
+			<label class="input-label" for="start">Insert a Date:</label>
+				<input name="dates" class="input-value" type="date" id="start" min="2020-01-01" max="2020-12-31">
+			
+			<label class="input-label" for="regions">Choose a Region:</label>
+				<select name="region" class="input-value" id="regions">
+					<option  value="Arica y Parinacota">Arica y Parinacota</option>
+					<option  value="Tarapaca">Tarapaca</option>
+					<option  value="Antofagasta">Antofagasta</option>
+					<option  value="Atacama">Atacama</option>
+					<option  value="Coquimbo">Coquimbo</option>
+					<option  value="Valparaiso">Valparaiso</option>
+					<option  value="Metropolitana">Metropolitana</option>
+					<option  value="O'Higgins">O'Higgins</option>
+					<option  value="Maule">Maule</option>
+					<option  value="Nuble">Ñuble</option>
+					<option  value="Biobio">Biobio</option>
+					<option  value="Araucania">Araucania</option>
+					<option  value="Los Rios">Los Rios</option>
+					<option  value="Los Lagos">Los Lagos</option>
+					<option  value="Aysen">Aysen</option>
+					<option  value="Magallanes">Magallanes</option>
+				</select>
+				<button class="search-btn" type="submit" value="Submit">Search</button>
+			</div>
+		</form>
+	</div>	
+{% endblock %}

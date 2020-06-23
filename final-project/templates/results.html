@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	 Cases of Covid-19 by Region in Chile
+{% endblock %}
+{% block body %}
+	<div class=table-view>
+
+		<h1 class="table-title"> Table of Covid-19 Cases in {{region}}</h1>
+		<form action="/plots">
+			<button class="plot-button" type="submit" value="Submit">Plot Cases of Covid</button>	
+		</form>
+		{% for table in tables %}
+            {{ table|safe }}
+		{% endfor %}
+	</div>
+	
+{% endblock %}
+

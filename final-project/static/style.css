@@ -1,0 +1,124 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://wallpapercave.com/wp/wp1846305.jpg);
+}	
+.header{
+	height: 100vh;
+	background-size: cover;
+	display: flex;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+}
+
+h1.main-title{
+	color: #fff;
+	margin-bottom: 70px;
+	font-size: 50px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+h1.table-title{
+	color: #fff;
+	text-align: center;
+
+}
+
+.input-label{
+	height: 30px;
+	padding: 10px;
+	border-radius:25spx;
+	outline: none;
+	width: 500px;
+	color: white;
+	font-family: sans-serif;
+	font-size: 20px;
+
+}
+
+.input-value{
+	width:200px;
+	height: 40px;
+}
+
+
+.search-btn{
+	height: 50px;
+	width: 150px;
+	background: #ffeb3b;
+	border: none;
+	color: #000;
+	border-radius: 25px;
+
+}
+.search-btn:hover{
+	background: #ffc107;
+	cursor: pointer;
+}
+.form-box{
+	background: rgba(0,0,0,0.5);
+	padding: 30px;
+	text-align: center;
+}
+
+table {
+	border-collapse: colapse;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.9em;
+	min-width: 400px;
+	background-color: #191970;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px frba(0,0,0,0.15);
+}
+
+.dataframe th {
+	background-color: #191970;
+	color: #ffffff;
+	text-align:left;
+	font-weight:bold;
+  
+}
+
+.dataframe td{
+	padding: 12px 15px;
+}
+.dataframe tbody tr{
+	border-bottom: 1px solid #dddddd;
+	background-color: #F5F5DC;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+}
+.dataframe tr:hover{
+	background: #ffc107;
+	cursor: pointer;
+}
+
+.dataframe tbody tr:last-of-type{
+	border-bottom: 2px solid #191970;
+}
+
+.plot-button{
+	height: 50px;
+	width: 150px;
+	background: #ffeb3b;
+	border: none;
+	color: #000;
+	border-radius: 25px;
+	font-family:sans-serif;
+	margin-left:20px;
+
+}
+.plot-button:hover{
+	background: #ffc107;
+	cursor: pointer;
+}
+
+.img-error{
+	text-align: center;
+}

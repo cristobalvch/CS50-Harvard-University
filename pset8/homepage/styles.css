@@ -1,0 +1,57 @@
+body
+{
+    color: white;
+    background: black;
+}
+h1
+{
+    color: white;
+    text-align: center;
+    font-size:4rem;
+}
+
+img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.main-bio
+{
+    text-align:center;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+  color: black;
+}
+
+.pull
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span
+{
+  opacity:0;
+  transition: all 0.4s ease;
+
+}
+
+.main-char
+{
+  opacity: 200;
+
+}
